@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Extractor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Email Extractor</h2>
+      <textarea
+        id="input"
+        placeholder="Paste sentences containing email addresses..."
+      ></textarea>
+      <button onclick="extractEmailDomains()">Extract Domains</button>
+      <textarea
+        id="output"
+        placeholder="Extracted email domains will appear here..."
+        readonly
+      ></textarea>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
