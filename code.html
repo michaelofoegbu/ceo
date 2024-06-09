@@ -3,48 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CEO Search Code Generator</title>
+    <title>Search Code Generator</title>
     <style>
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         padding: 20px;
+        background-image: url(images/banner2.jpg);
+        color: #d8cbcb;
+        text-align: center;
       }
       textarea {
         width: 100%;
-        height: 150px;
+        color: black;
+        height: 120px;
         margin-bottom: 10px;
         padding: 10px;
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 4px;
+        background-color: #d8cbcb;
       }
       button {
         display: block;
-        width: 100%;
+        margin: auto;
+        width: 60%;
         padding: 10px;
         font-size: 18px;
         cursor: pointer;
-        background-color: #4caf50;
+        background-color: rgb(136, 98, 29);
         color: white;
         border: none;
-        border-radius: 4px;
+        border-radius: 200px;
+        font-weight: bold;
       }
       button:hover {
-        background-color: #45a049;
+        background-color: #36470d;
+        transition: 1s;
       }
     </style>
   </head>
   <body>
-    <h2>CEO Search Code Generator</h2>
+    <h2>Search Code Generator</h2>
     <textarea
       id="sentences"
       placeholder="Paste your list of sentences here..."
       spellcheck="false"
     ></textarea>
-    <button onclick="generateCode()">Generate JavaScript Code</button>
+    <button onclick="generateCode()">Generate Code</button>
 
-    <h2>Generated JavaScript Code:</h2>
+    <h2>Generated Code:</h2>
     <textarea id="generatedCode" readonly spellcheck="false"></textarea>
 
     <script>
@@ -73,7 +81,7 @@
         sentences.forEach(function (sentence) {
           var searchQuery = sentence;
           var searchUrl =
-            "https://www.google.com/search?q=Who%20is%20the%20current%20CEO%20of%20" +
+            "https://www.google.com/search?q=" +
             encodeURIComponent(searchQuery);
           var line = 'window.open("' + searchUrl + '", "_blank");';
           jsCode.push(line);

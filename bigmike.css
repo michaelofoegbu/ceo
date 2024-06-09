@@ -3,22 +3,32 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #d8cbcb;
 }
 
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
+  max-height: 100%;
+  background-color: rgb(71, 67, 67);
 }
-
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: black;
+}
 .container {
-  max-width: 800px;
+  max-width: 80%;
+  height: 90%;
   margin: 20px auto;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 8px;
+  background-image: url(images/banner2.jpg);
 }
 
 header {
@@ -49,39 +59,43 @@ main {
 }
 
 .btn-primary {
-  background-color: #4caf50;
+  background-color: #36470d;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #45a049;
+  background-color: rgb(136, 98, 29);
+  transition: 1s;
 }
 
 .btn-secondary {
-  background-color: #008cba;
+  background-color: #36470d;
   color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #007b9d;
+  background-color: rgb(136, 98, 29);
+  transition: 1s;
 }
 
 .btn-tertiary {
-  background-color: #f44336;
+  background-color: #36470d;
   color: white;
 }
 
 .btn-tertiary:hover {
-  background-color: #da251d;
+  background-color: rgb(136, 98, 29);
+  transition: 1s;
 }
 
 .btn-accent {
-  background-color: #ffd700;
+  background-color: #36470d;
   color: #333;
 }
 
 .btn-accent:hover {
-  background-color: #e6c500;
+  background-color: rgb(136, 98, 29);
+  transition: 1s;
 }
 
 footer {
@@ -89,4 +103,7 @@ footer {
   margin-top: 20px;
   padding-top: 10px;
   border-top: 1px solid #ccc;
+  p {
+    font-weight: bold;
+  }
 }
